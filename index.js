@@ -65,6 +65,8 @@ async function run (){
             res.send(enrolls)
         })
 
+        // post users from firebase
+
         app.post('/users', async(req, res)=>{
             const users = req.body;
             const result = await userCollection.insertOne(users)
